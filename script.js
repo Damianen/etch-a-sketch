@@ -15,3 +15,16 @@ for (let i = 1; i < 17; i++)
 
     gridContainer.appendChild(row);
 }
+
+document.addEventListener('mousemove', () => 
+{
+    const cells = document.querySelectorAll(".cell");
+    for (const cell of cells)
+    {
+        if (cell.matches(".cell:hover"))
+        {
+            cell.classList.add('dark-bg');
+        }
+    }
+})
+
