@@ -28,3 +28,20 @@ document.addEventListener('mousemove', () =>
     }
 })
 
+const resetBtn = document.querySelector('#reset');
+resetBtn.onclick = () => 
+{
+    const cells = document.querySelectorAll(".dark-bg");
+    cells.forEach((cell) => 
+    {
+        cell.classList.remove('dark-bg');
+    })
+}
+
+const newGridBtn = document.querySelector('#newGrid');
+newGridBtn.onclick = () =>
+{
+    const rows = document.querySelectorAll('.row');
+    rows.forEach((row) => {row.remove();});
+    let newRows = Number(prompt("How many new rows and columns do you want: "));
+}
