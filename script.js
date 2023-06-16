@@ -1,12 +1,12 @@
 
 const gridContainer = document.querySelector(".grid-container");
 
-for (let i = 1; i < 17; i++)
+for (let i = 0; i < 16; i++)
 {
     const row = document.createElement('div');
     row.classList.add("row");
 
-    for (let j = 1; j < 17; j++)
+    for (let j = 0; j < 16; j++)
     {
         const cell = document.createElement('div');
         cell.classList.add("cell");
@@ -43,5 +43,24 @@ newGridBtn.onclick = () =>
 {
     const rows = document.querySelectorAll('.row');
     rows.forEach((row) => {row.remove();});
-    let newRows = Number(prompt("How many new rows and columns do you want: "));
+    let newRows = 0;
+    while (newRows < 1 || newRows > 100)
+    {
+        newRows = Number(prompt("How many new rows and columns do you want: (pick between 1 and 100)"));
+    }
+
+    for (let i = 0; i < newRows; i++)
+    {
+        const row = document.createElement('div');
+        row.classList.add("row");
+
+        for (let j = 0; j < newRows; j++)
+        {
+            const cell = document.createElement('div');
+            cell.classList.add("cell");
+            row.appendChild(cell);
+        }
+
+        gridContainer.appendChild(row);
+    }
 }

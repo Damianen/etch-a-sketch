@@ -4,20 +4,17 @@
 }
 
 .grid-container {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 .row {
     flex: 1;
-    border: 1px solid blue;
     display: flex;
 }
 
 .cell {
-    border: 1px solid green;
     flex: 1;
 }
 
